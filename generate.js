@@ -3,7 +3,7 @@ const promptElement = document.getElementById("prompt-choice");
 const uploadGenerate = document.getElementById("upload-generate");
 const display = document.getElementById("downloadable-images-container");
 const imgQuote = document.getElementById("img-containers");
-promptElement.innerHTML = "Prompt";
+// promptElement.innerHTML = "Prompt";
 
 // function toggleDisplay() {
 //   if (promptElement.innerHTML === "Prompt") {

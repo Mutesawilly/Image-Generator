@@ -28,7 +28,7 @@
         <!-- Choose wether you will use uploaded image or prompt... -->
         <section class="choice">
           <p class="qoute-to-capture">Try to generate by </p>
-          <p id="prompt-choice" onclick="disp_one()">Prompt</p>
+          <p id="prompt-choice">Prompt</p>
         </section>
 
         <!-- <section id="upload-generate"> <img src="Images/icons8-add-image-48.png" width="80" id="img-containerers">
@@ -56,7 +56,7 @@
         </section>
 
         <section class="prompt_gen_button">
-          <button id="submit" onclick="imagesGen()">Generate</button>
+          <button id="submit">Generate</button>
           <p> With ImgStock</p>
         </section>
       </section>
@@ -90,7 +90,7 @@
         </section>
       </section>
     </section>
-    <script src="generate.js"></script>
+    <!-- <script src="generate.js"></script> -->
 </body>
 
 </html>
