@@ -1,0 +1,139 @@
+/* Links redirecting you to different parts on our website designed form here! */
+.to-pages-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.redirecting-to-pages-links {
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.redirecting-to-pages-links:hover {
+  background-color: orangered;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: white;
+}
+
+.redirecting-to-pages-links:click {
+  background-color: orangered;
+  padding: 5px 15px;
+  border-radius: 15px;
+  color: white;
+}
+
+.login-signup {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+#login-signup {
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 2px solid orangered;
+  color: orangered;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.subscription-btn {
+  background-color: orangered;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  appearance: none;
+  padding: 10px 25px;
+  max-width: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Read more button designed here! */
+.read-more {
+  background-color: orangered;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.read-more:hover {
+  background-color: orangered;
+}
+
+.read-more:active {
+  background-color: orangered;
+}
+
+.download {
+  background-color: orangered;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+#submit {
+  background-color: orangered;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.ads-read-more-btn {
+  border: none;
+  background-color: orangered;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+
+.ads-read-more-btn {
+  border: none;
+  background-color: orangered;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+
+/* Read more button designed here! */
+.search {
+  background-color: orangered;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 20px 50px 20px 50px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.search:hover {
+  background-color: rgb(200, 73, 27);
+}
+
+.search:active {
+  background-color: rgb(200, 73, 27);
+  outline: 2px solid orangered;
+  outline-offset: 3px;
+}

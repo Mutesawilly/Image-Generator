@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)),
+    url("/Images/TextToImage_30_20240406.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 150px;
+  padding: 50px;
+}
+
+main:after {
+  background-color: rgb(0, 0, 0, 0.9);
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0px 50px 0px 50px;
+}
+
+.sett-prof {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* Our navigating bar designed here! */
+.upper-part-nav-read {
+  display: flex;
+  align-items: stretch;
+  gap: 50px;
+  justify-content: center;
+  padding: 15px 50px;
+}
+
+.menu-side-bar {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 5px solid horangered;
+}
+
+.web-logo-read {
+  color: orangered;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.side-icons,
+.fav-hom-pos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.middle-part-nav-read {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.to-pages-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.red-links-read {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Cards containers designed from here! */
+.readings-read {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.read-container {
+  background-color: rgb(226, 222, 222);
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.readings {
+  display: flex;
+  align-items: normal;
+  justify-content: space-around;
+  gap: 50px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid rgb(232, 231, 231);
+}
+
+.large-content-readings {
+  background-color: white;
+  border-radius: 25px;
+  padding: 0px 50px 30px 50px;
+}
+
+.captivating-heading {
+  padding: 20px 0px 20px 0px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid rgb(232, 231, 231);
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Post dates and read more designed here! */
+.dates-read-more {
+  max-width: 350px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.posting-dates {
+  align-self: flex-start;
+  font-size: 14px;
+  color: orangered;
+  font-weight: bold;
+}
+
+.important-buttons-read {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* Card of posts designed here! */
+.first-reading {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(236, 233, 233);
+  border-radius: 25px;
+}
+
+#first-reading-n {
+  background-image: url('Images/TextToImage_37_20240406.jpeg');
+  min-height: 400px;
+  max-width: 400px;
+  background-color: rgb(236, 233, 233);
+  border-radius: 25px;
+}
+
+.posts-images {
+  background-image: url("Images/TextToImage_34_20240331.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 230px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+.content-on-the-image {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 5px 20px 30px 20px;
+}
+
+.authors-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.authors-role {
+  font-size: 14px;
+  font-weight: normal;
+  color: white;
+}
+
+.bio-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+}
+
+.bio-author {
+  display: flex;
+  align-items: center;
+  align-self: baseline;
+  justify-content: center;
+  gap: 30px;
+  background-color: rgb(0, 0, 0, 0.3);
+  padding: 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.bio-author-n {
+  background-color: rgb(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bio-all-together {
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  max-width: 350px;
+  text-align: justify;
+  font-weight: 500;
+}
+
+#downloadable-images-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.image-stocks-n {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.image-stocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.image-stocks-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+footer {
+  background-color: rgb(232, 231, 231);
+  color: orangered;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  list-style: none;
+}
+
+.socialmedia-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  list-style: none;
+}
+
+
+.image-second-cont {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.pic_authors_name {
+  display: flex;
+  gap: 10px;
+}
+
+.imported-image-second-part {
+  border-radius: 25px;
+  max-width: 350px;
+}

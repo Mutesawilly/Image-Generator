@@ -1,0 +1,114 @@
+/* Our commenting space designed from here!*/
+.comment-part {
+  outline: none;
+  appearance: none;
+  border: 2px solid orangered;
+  color: orangered;
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 15px;
+  min-height: 150px;
+}
+
+.comment-part:hover {
+  outline: none;
+  border: none;
+  background-color: orangered;
+  color: white;
+}
+
+textarea::placeholder {
+  color: orangered;
+}
+
+textarea:hover::placeholder {
+  color: white;
+}
+
+/* Our subscription form and it's input's designed from here! */
+.subscription-part {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 80px 50px;
+}
+
+.qoute-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.qoute {
+  font-size: 48px;
+  font-weight: bold;
+  max-width: 70%;
+}
+
+.qoute-desc-form {
+  font-size: 18px;
+  max-width: 60%;
+}
+
+.subs-form {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid orangered;
+  padding: 20px;
+  border-radius: 15px;
+  gap: 20px;
+}
+
+.sub-form {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.first-name,
+.user-name,
+.email {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  border: 2px solid orangered;
+  outline: none;
+  background-color: orangered;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+::placeholder {
+  color: white;
+  font-size: 14px;
+  text-align: justify;
+  transition: 500s;
+}
+
+/* Our searching Bar designed from here! */
+.search-bar-read {
+  width: 50%;
+  background-color: orangered;
+  color: white;
+  display: flex;
+  padding-right: 20px;
+  align-items: stretch;
+  border-radius: 15px;
+}
+
+.search-bar {
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  appearance: none;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 15px 0px 15px 50px;
+  border-radius: 15px;
+  transition: 555s;
+}
