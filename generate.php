@@ -31,9 +31,9 @@
           <p id="prompt-choice" onclick="disp_one()">Prompt</p>
         </section>
 
-        <section id="upload-generate"> <img src="Images/icons8-add-image-48.png" width="80" id="img-containerers">
+        <!-- <section id="upload-generate"> <img src="Images/icons8-add-image-48.png" width="80" id="img-containerers">
           <p id="img-cont-content">Click here to <span id="spanned">upload</span> the image </p>
-        </section>
+        </section> -->
 
         <section id="prompt-input-container">
           <img src="Icons/icons8-image-24.png" width="50">
