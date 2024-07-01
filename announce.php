@@ -5,9 +5,6 @@
   }
   ?>
 
-
-
-
 <!DOCTYPE html>
 <html>
 
