@@ -1,7 +1,11 @@
 <?php
-session_start();
-session_destroy();
-if(mysqli_query(session_destroy())){
-    header("location:home.php");
-}
+session_start(); // Start the session
+
+// Destroy all session data
+session_unset(); // Unset all session variables
+session_destroy(); // Destroy the session
+
+// Redirect to the home page or login page
+header("Location: home.php"); // Change "home.php" to your desired page
+exit; // Ensure no further code is executed
 ?>

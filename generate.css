@@ -1,7 +1,17 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
 }
 
 .side-tools {
@@ -10,22 +20,25 @@
   min-height: 100vh;
   padding: 20px;
   display: flex;
+  text-align: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
+
 .logo-name {
   display: flex;
   align-items: center;
   gap: 20px;
   color: orangered;
 }
+
 .generation {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/*  Choose wether you will use uploaded image or prompt...  */
+/* Choose whether you will use uploaded image or prompt... */
 .choice {
   display: flex;
   align-items: center;
@@ -37,7 +50,7 @@
   border-radius: 15px;
 }
 
-.qoute-to-capture {
+.quote-to-capture {
   color: gray;
   margin-right: 20px;
 }
@@ -45,16 +58,16 @@
 #prompt-choice {
   cursor: pointer;
   border: none;
-  background-color: orangered;
-  color: white;
+  font-weight: bold;
+  color: orangered;
   padding: 8px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #prompt-input-container {
   display: flex;
   background-color: white;
-  align-items: start;
+  align-items: flex-start;
   gap: 15px;
   border-radius: 15px;
   padding: 20px;
@@ -73,21 +86,22 @@
   padding: 0px 10px;
 }
 
-/* references to help our AI now exactly what to generate are designed from here.... */
 .references {
   color: orangered;
   font-size: 16px;
   display: flex;
   align-items: stretch;
   justify-content: space-around;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px;
   border-radius: 15px;
 }
 
-#ref_1 {
+.ref-item {
   background-color: white;
   border-radius: 10px;
   text-align: center;
+  cursor: pointer;
+  max-width: 90px;
 }
 
 .img-design {
@@ -97,56 +111,83 @@
 }
 
 .ref-design {
-  padding: 10px;
-  font-weight: bold;
+  padding: 15px 15px;
+  font-weight: 600;
 }
 
 .prompt_gen_button {
-  background-color: white;
-  color: gray;
-  padding: 20px;
+  color: grey;
+  padding: 15px;
   border-radius: 15px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-size: 16px;
 }
+
 #generate-image {
-  background-color: orangered;
+  background-color: rgb(255, 69, 0, 0.8);
   border: none;
+  outline: none;
   color: white;
   font-size: 16px;
-  padding: 10px 30px;
+  padding: 15px 30px;
   border-radius: 10px;
+  cursor: pointer;
 }
+
+#generate-image.clicked {
+  background-color: transparent;
+  border: 2px solid orangered;
+  color: orangered;
+}
+
 .important-buttons {
   align-self: baseline;
   display: flex;
   gap: 20px;
   color: orangered;
-  margin-left: 15px;
 }
-/* container designed here!!!!!!!!!!!!!!!! */
-.container{
-  display: flex;
+
+.important-buttons a {
+  text-decoration: none;
+  color: orangered;
+  font-size: 16px;
 }
-.heading-page{
-  min-width: 1000px;
-  min-height: 30px;
+
+.generation-page {
+  flex: 1;
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
-.ess-buttons{
+
+.heading-page {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ess-buttons {
+  display: flex;
+  align-items: stretch;
   gap: 20px;
 }
-#image-container{
-  box-shadow: 0px 0px 10px 1px gray;
-  width:96%;
-  min-height: 70vh;
+
+#image-container {
+  display: flex;
+  overflow-y: auto;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-height: 80vh;
   border-radius: 15px;
-  margin-top: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+}
+/* Profile icons designed here!!!!!!!!! */
+.essential-icons{
+  background-color: transparent;
+  border: none;
+  outline: none;
 }

@@ -57,7 +57,7 @@ function displingOthers() {
 //                             <p class="authors-role">UI/UX Designer</p>
 //                         </section>
 //                     </section>
-//                     <a download="${upload_image}" href="${upload_image}"><button
+//                     <a download=url(${upload_image}) href= ${upload_image}><button
 //                             class="read-more">Download</button></a>
 //                 </section>
 //             </section>`;
