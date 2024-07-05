@@ -20,7 +20,6 @@ body {
   min-height: 100vh;
   padding: 20px;
   display: flex;
-  text-align: center;
   flex-direction: column;
   gap: 20px;
 }
@@ -38,7 +37,6 @@ body {
   gap: 10px;
 }
 
-/* Choose whether you will use uploaded image or prompt... */
 .choice {
   display: flex;
   align-items: center;
@@ -46,22 +44,27 @@ body {
   color: orangered;
   font-weight: 400;
   background-color: white;
-  padding: 20px;
+  padding: 25px 20px;
   border-radius: 15px;
 }
 
 .quote-to-capture {
   color: gray;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 #prompt-choice {
-  cursor: pointer;
-  border: none;
+  font-size: 18px;
   font-weight: bold;
   color: orangered;
-  padding: 8px 10px;
-  border-radius: 5px;
+  animation: flicker 3.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  40% { opacity: 0.8; }
+  60% { opacity: 0.8; }
+  100% { opacity: 1; }
 }
 
 #prompt-input-container {
@@ -74,25 +77,30 @@ body {
 }
 
 #search-term {
-  background-color: transparent;
+  background-color: grey;
+  position: absolute;
   border: none;
   outline: none;
   cursor: pointer;
   color: orangered;
-  font-size: 16px;
+  font-size: 18px;
   text-align: justify;
   width: 100%;
-  min-height: 150px;
+  min-height: 50px;
   padding: 0px 10px;
+  align-self: baseline;
+}
+
+.image-resolution-label {
+  color: orangered;
+  font-weight: bold;
 }
 
 .references {
-  color: orangered;
   font-size: 16px;
   display: flex;
   align-items: stretch;
   justify-content: space-around;
-  padding: 10px 0px;
   border-radius: 15px;
 }
 
@@ -111,6 +119,7 @@ body {
 }
 
 .ref-design {
+  color: orangered;
   padding: 15px 15px;
   font-weight: 600;
 }
@@ -126,7 +135,7 @@ body {
 }
 
 #generate-image {
-  background-color: rgb(255, 69, 0, 0.8);
+  background-color: rgb(255, 69, 0);
   border: none;
   outline: none;
   color: white;
@@ -143,10 +152,18 @@ body {
 }
 
 .important-buttons {
-  align-self: baseline;
-  display: flex;
-  gap: 20px;
+  display: none;
+  flex-direction: column;
   color: orangered;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#sub, #submt {
+  padding: 8px 20px;
+  border: 1px solid orangered;
+  border-right-width: 2px;
+  border-left-width: 2px;
 }
 
 .important-buttons a {
@@ -160,6 +177,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .heading-page {
@@ -179,15 +197,24 @@ body {
   overflow-y: auto;
   flex-wrap: wrap;
   gap: 10px;
-  min-height: 80vh;
+  width: 100%;
+  min-height: 70vh;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: white;
-  padding: 20px;
 }
-/* Profile icons designed here!!!!!!!!! */
-.essential-icons{
+
+.essential-icons, .essential-icons_1 {
   background-color: transparent;
   border: none;
   outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+}
+
+.footer-text {
+  color: grey;
 }

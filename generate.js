@@ -66,3 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add a click event listener to the button
   generateImageButton.addEventListener("click", fetchAndDisplayImages);
 });
+document.querySelector('.dropdown-menu img').addEventListener('click', function() {
+  document.querySelector('.important-buttons').style.display = 
+    document.querySelector('.important-buttons').style.display === 'flex' ? 'none' : 'flex';
+});
