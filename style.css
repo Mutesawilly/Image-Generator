@@ -319,3 +319,31 @@ footer {
   border-radius: 25px;
   max-width: 350px;
 }
+#about {
+  background-color: rgb(255, 69, 0);
+  border: none;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.welcome-page-to-know-us{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 50px;
+  padding: 100px 50px;
+}
+.welcome-page-container{
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.image-desc{
+  max-width: 400px;
+  border-radius: 25px;
+}

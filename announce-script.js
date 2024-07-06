@@ -30,9 +30,7 @@ let announce_btn_a = document.getElementById("announce-btn-second");
 
 
 submitBtn.addEventListener("click", function() {
-  first_reading_n.style.backgroundImage = `url(${upload_image})`;
   if (upload_image) {
-    announce_btn_a.style.display = "flex";
     document.getElementById("waiting-message").style.display = "none";
     bio_author.style.display = "flex";
     first_reading_n.style.display = "block";
@@ -41,10 +39,6 @@ submitBtn.addEventListener("click", function() {
     document.getElementById("waiting-message").style.display = "flex";
   }
 })
-
-function displingOthers() {
-  bio_author.style.display = "flex";
-}
 
 // Image posting and searching functions with javascript
 

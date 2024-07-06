@@ -1,43 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* announce-style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: rgb(226, 222, 222);
   font-family: "Poppins", sans-serif;
-  font-optical-sizing: auto;
   display: flex;
   flex-direction: column;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-radius: 15px;
+}
+
+.to-pages-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.redirecting-to-pages-links {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  color: orangered;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.redirecting-to-pages-links:hover {  
+  background-color: orangered;
+  color: white;
+  border-radius: 15px;
 }
 
 .all-together {
   display: flex;
   justify-content: space-around;
+  align-items: stretch;
   padding: 30px;
-}
-
-#side-uploads {
-  background-color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: center;
-  border-radius: 25px;
-  max-height: 400px;
-  gap: 20px;
-  overflow: auto;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
-  padding: 20px;
+  align-items: stretch;
   border-radius: 25px;
 }
 
@@ -46,23 +68,17 @@ input[type="file"] {
 }
 
 #img-containers {
-  background-image: url("");
-  background-size: cover;
   background-color: white;
-  background-repeat: no-repeat;
   border: 2px dashed orangered;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
   border-radius: 25px;
-  width: 450px;
-  min-height: 200px;
+  min-height: 300px;
   color: orangered;
   font-size: 16px;
 }
-
 
 span {
   font-weight: bold;
@@ -77,12 +93,11 @@ span {
   gap: 50px;
   color: orangered;
   background-color: white;
-  border: 2px solid white;
   padding: 20px 20px;
   border-radius: 15px;
 }
 
-#announce-btn {
+#announce-btn, #announce-btn-second {
   border: none;
   outline: none;
   border-radius: 10px;
@@ -95,14 +110,6 @@ span {
 
 #announce-btn-second {
   display: none;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  background-color: orangered;
-  color: white;
-  font-size: 16px;
-  padding: 10px 20px;
-  font-family: "Poppins", sans-serif;
 }
 
 .announce-qoute {
@@ -117,8 +124,6 @@ span {
 }
 
 #first_reading_n {
-  background-image: url("");
-  background-size: cover;
   min-height: 300px;
   max-width: 350px;
   border-radius: 25px;
@@ -129,7 +134,7 @@ span {
 }
 
 #bio-author {
-  background-color: rgb(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   display: none;
   align-items: center;
   justify-content: center;
@@ -151,7 +156,6 @@ span {
 
 .authors-role {
   font-size: 14px;
-  font-weight: normal;
 }
 
 .bio-img {
@@ -165,8 +169,6 @@ span {
   gap: 10px;
 }
 
-
-/* Read more button designed here! */
 .read-more {
   background-color: orangered;
   color: white;
@@ -177,105 +179,48 @@ span {
   border-radius: 20px;
 }
 
-.read-more:hover {
-  background-color: orangered;
+.read-more:hover, .read-more:active {
+  background-color: darkred;
 }
 
-.read-more:active {
-  background-color: orangered;
+#side-uploads {
+  background-color: white;
+  color: orangered;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  border-radius: 25px;
+  gap: 20px;
 }
 
-.download {
-  background-color: orangered;
-  border: none;
-  padding: 5px 20px;
-  border-radius: 10px;
+#downloadable-images-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
+  color: orangered;
 }
-
 .logo-name {
   display: flex;
   align-items: center;
   gap: 20px;
   color: orangered;
 }
-h2{
-  color: orangered;
-}
-
-nav {
-  background-color: white;
+.ess-buttons {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  border-radius: 15px;
-  /* border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px; */
-}
-
-.to-pages-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 10px;
 }
 
-/* Links redirecting you to different parts on our website designed form here! */
-.to-pages-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.redirecting-to-pages-links {
-  outline: none;
-  border: none;
-  font-family: "Poppins", sans-serif;
+.essential-icons, .essential-icons_1 {
   background-color: transparent;
-  color: orangered;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 15px;
-}
-
-.redirecting-to-pages-links:hover {
-  background-color: orangered;
-  padding: 10px 20px;
-  border-radius: 15px;
-  color: white;
-}
-
-.redirecting-to-pages-links:click {
-  background-color: orangered;
-  padding: 5px 15px;
-  border-radius: 15px;
-  color: white;
-}
-
-.search-icon,
-.profile-icon {
-  display: none;
-  background-color: transparent;
-  max-width: 40px;
-  min-height: 40px;
   border: none;
   outline: none;
-}
-
-.sett-prof {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.login-signup {
-  background-color: orangered;
-  color: white;
-  outline: none;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  padding: 10px 50px;
-  border-radius: 15px;
-  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
 }

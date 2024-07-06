@@ -47,10 +47,10 @@
         <section id="prompt_gen_button">
           <button id="generate-image">Generate</button>
         </section>
-            <section class="important-buttons" href="logout.php">
+            <a class="important-buttons" href="logout.php">
               <img src="icons/icons8-logout-64.png" width="35" alt="">
-              <a id="submt">Logout</a>
-            </section>           
+              <p id="submt">Logout</p>
+            </a>           
 </section>
     </section>
     <section class="generation-page">

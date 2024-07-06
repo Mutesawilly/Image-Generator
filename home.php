@@ -22,12 +22,8 @@
           <input type="email" name="email" id="email" placeholder="Enter Your Email Address" required>
           <select id="usersRole" name="usersRole" required>
             <option value="" selected>Select Option</option>
-            <option value="Junior Mobile & Web Designer">Junior Mobile & Web Designer</option>
-            <option value="Senior Mobile & Web Designer">Senior Mobile & Web Designer</option>
-            <option value="Junior Developer">Junior Developer</option>
-            <option value="Senior Developer">Senior Developer</option>
-            <option value="Student">Student</option>
-            <option value="Teacher">Teacher</option>
+            <option value="Student">User</option>
+            <option value="Teacher">Admin</option>
           </select>
           <input type="password" name="password" id="password" placeholder="Use a strong password" required>
           <button type="submit" id="submit-signup" name="submit-signup">Create account</button>

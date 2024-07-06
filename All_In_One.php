@@ -10,7 +10,7 @@ if(isset($_POST["submit-signup"])){
 $submitting = "INSERT INTO `login_signup_form` (userName, emailAddress, usersRole, PASSWORD) VALUES ( '$userName', '$emailAdderss', '$usersRole', '$PASSWORD')";
 
 if(mysqli_query($connections, $submitting)){
-    header("location:home.php");
+    header("location:index.html");
 }else{
     echo("Try another emailAdress...");
 }}
@@ -29,7 +29,7 @@ if(isset($_POST["submit-login"])){
         $_SESSION['id']=$record['userId'];
         $_SESSION['username']=$record['userName'];
         $_SESSION['emailAdress']=$record['emailAddress'];
-        header("location:generate.php");
+        header("location:index.html");
     }
     else{
         echo("Try again with correct credentials...");
