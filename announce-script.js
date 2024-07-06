@@ -27,39 +27,33 @@ let submitBtn = document.getElementById("announce-btn");
 let first_reading_n = document.getElementById("first_reading_n");
 let bio_author = document.getElementById("bio-author");
 let announce_btn_a = document.getElementById("announce-btn-second");
+let downloadable_images_container = document.getElementById("downloadable-images-container");
+
 
 
 submitBtn.addEventListener("click", function() {
-  if (upload_image) {
-    document.getElementById("waiting-message").style.display = "none";
-    bio_author.style.display = "flex";
-    first_reading_n.style.display = "block";
+  if (!upload_image) {
+    alert("Please Upload The Images!") ;   
   }
   else {
-    document.getElementById("waiting-message").style.display = "flex";
+    let html_input = `<section class="first-reading-n">
+    <section class="bio-author">
+        <section class="pic_authors_name">
+            <img src="Images/testm_1.webp" alt="" class="bio-img">
+            <section class="names-role">
+                <h1 class="authors-name">Beth Anderson</h1>
+                <p class="authors-role">UI/UX Designer</p>
+            </section>
+        </section>
+        <a download="ImgStock Generated Images" href=${upload_image}><button
+                class="read-more">Download</button></a>
+    </section>
+    <img src=${upload_image} alt="ImgStock Generated Images" class="Image-Uploaded">    
+</section>`;
+document.addEventListener('DOMContentLoaded', (upload_image) => {              
+first_reading_n.style.backgroundImage = `${upload_image}`;
+bio_author.style.display = "flex";
+});
+downloadable_images_container.innerHTML += html_input;
   }
 })
-
-// Image posting and searching functions with javascript
-
-// let html_input = `<section class="first-reading-n">
-//                 <section class="bio-author">
-//                     <section class="pic_authors_name">
-//                         <img src="Images/testm_1.webp" alt="" class="bio-img">
-//                         <section class="names-role">
-//                             <h1 class="authors-name">Beth Anderson</h1>
-//                             <p class="authors-role">UI/UX Designer</p>
-//                         </section>
-//                     </section>
-//                     <a download=url(${upload_image}) href= ${upload_image}><button
-//                             class="read-more">Download</button></a>
-//                 </section>
-//             </section>`;
-
-// let announce_btn_second = document.getElementById("announce-btn-second");
-// let downloadable_images_container = document.getElementById("downloadable-images-container");
-
-// announce_btn_second.addEventListener("click", function() {
-//   console.log(html_input);
-//   downloadable_images_container.innerHTML += html_input;
-// });
