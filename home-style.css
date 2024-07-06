@@ -51,7 +51,7 @@ body {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.9),
       rgba(0, 0, 0, 0.8)),
-    url("/Images/TextToImage_6_20240406.jpeg");
+    url("Images/TextToImage_6_20240406.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;

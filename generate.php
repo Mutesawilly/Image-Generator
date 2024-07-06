@@ -11,16 +11,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Generator App</title>
-  <link rel="stylesheet" href="generate.css?=filemtime(ASSETS_BASE_DIR.'/f/css/lightbox.css')?>">
+  <link rel="stylesheet" href="generate.css">
 </head>
 <body>
   <div class="container">
     <section class="side-tools">
-      <section class="generation">
+      
         <section class="choice">
-          <p class="quote-to-capture">Try to generate by</p>
-          <p id="prompt-choice">Prompt</p>
+          <p class="quote-to-capture">Generate unique and stunning</p>
+          <p id="prompt-choice">Images!</p>
         </section>
+        
+      <section id="prompt-input-container">
+          <img src="icons/icons8-image-24.png" width="50" alt="">
+          <textarea id="search-term" placeholder="Write your prompt here..."></textarea>
+        </section>
+        <section class="generation">
         <p class="image-resolution-label">Choose your image resolution:</p>
         <section class="references">
           <section class="ref-item">
@@ -35,12 +41,17 @@
             <img src="Images/images.jfif" class="img-design" alt="Artistic">
             <p class="ref-design">Artistic</p>
           </section>
+        </section>   
+      </section>    
+      <section class="btns">      
+        <section id="prompt_gen_button">
+          <button id="generate-image">Generate</button>
         </section>
-        <section class="prompt_gen_button">
-          <button id="generate-image">Generate With ImgStock</button>
-        </section>
-      </section>
-      <p class="footer-text">© 2024 Copyrights MW All Rights Reserved.</p>
+            <section class="important-buttons" href="logout.php">
+              <img src="icons/icons8-logout-64.png" width="35" alt="">
+              <a id="submt">Logout</a>
+            </section>           
+</section>
     </section>
     <section class="generation-page">
       <section class="heading-page">
@@ -49,25 +60,16 @@
           <h2>ImgStock.<span>AI</span></h2>
         </section>
         <section class="ess-buttons">
-          <img src="Icons/icons8-post-50.png" alt="Post" class="essential-icons">
+          <img src="Icons/icons8-help-50 (1).png" alt="Post" class="essential-icons">
           <section class="dropdown-menu">
             <img src="Icons/icons8-user-50.png" alt="Profile Picture" class="essential-icons_1">
-            <section class="important-buttons">
-              <a id="sub" href="#">History</a>
-              <a id="sub" href="generate.php">Generate</a>
-              <a id="sub" href="#">Help</a>
-              <a id="submt" href="logout.php">Logout</a>
-            </section>
           </section>
         </section>
       </section>
       <div id="image-container"></div>
-      <section id="prompt-input-container">
-          <img src="Icons/icons8-image-24.png" width="55" alt="Icon">
-          <textarea id="search-term" placeholder="Write your prompt here..."></textarea>
-        </section>
+      <p class="footer-text">© 2024 Copyrights MUTESA-WILLY All Rights Reserved.</p>
     </section>
   </div>
-  <script src="generate.js"></script>
+  <script async src="generate.js"></script>
 </body>
 </html>

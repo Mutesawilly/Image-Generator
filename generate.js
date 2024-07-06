@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Get references to the input field, button, and image container
   const genPromptInput = document.getElementById("search-term");
-  const generateImageButton = document.getElementById("generate-image");
+  const generateImageButton = document.getElementById("prompt_gen_button");
   const imageContainer = document.getElementById("image-container");
 
   // Your Pexels API key
@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Clear the image container
       imageContainer.innerHTML = '';
-      generateImageButton.innrHTML = `<img src="Icons/icons8-image-24.png" width="50">`;
 
       // Loop through the photos and display each image
       data.photos.forEach(photo => {
@@ -65,8 +64,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add a click event listener to the button
   generateImageButton.addEventListener("click", fetchAndDisplayImages);
-});
-document.querySelector('.dropdown-menu img').addEventListener('click', function() {
-  document.querySelector('.important-buttons').style.display = 
-    document.querySelector('.important-buttons').style.display === 'flex' ? 'none' : 'flex';
 });

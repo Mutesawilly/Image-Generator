@@ -13,13 +13,13 @@
   <meta name="viewport" content="width=device-width">
   <title>Image Generator And Stock With Artificial Intelligence!</title>
   <link href="announce-style.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script>
 </head>
 
 <body>
   <nav>
-    <section class="our-webs-name">
-      <a href="index.html" class="web-logo-read">Home</a>
+    <section class="logo-name">
+          <a href="index.html"><img src="Icons/icons8-go-back-64 (1).png" width="30" alt="Go Back"></a>
+          <h2>ImgStock.AI</h2>
     </section>
     <section class="reading-packages-redirecting-links">
       <ul class="to-pages-links">
@@ -58,7 +58,7 @@
     </section>
     <section id="side-uploads">
       <section id="first_reading_n">
-        <h1 id="waiting-message">Your Images Will Appear Here!</h1>
+        <h1 id="waiting-message">Your Images Preview Will Appear Here!</h1>
         <section id="bio-author">
           <section class="pic_authors_name">
             <img src="Images/testm_1.webp" alt="" class="bio-img">
@@ -78,6 +78,7 @@
   </section>
 
   <script src="announce-script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

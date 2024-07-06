@@ -16,8 +16,6 @@ body {
 
 .side-tools {
   background-color: rgb(226, 222, 222);
-  width: 360px;
-  min-height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -40,12 +38,11 @@ body {
 .choice {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   color: orangered;
   font-weight: 400;
-  background-color: white;
-  padding: 25px 20px;
-  border-radius: 15px;
+  padding: 10px 0px;
+  border-left: 4px solid orangered;
+  padding-left: 10px;
 }
 
 .quote-to-capture {
@@ -71,26 +68,22 @@ body {
   display: flex;
   background-color: white;
   align-items: flex-start;
-  gap: 15px;
-  border-radius: 15px;
+  gap: 20px;
+  border-radius: 10px;
   padding: 20px;
 }
 
 #search-term {
-  background-color: grey;
-  position: absolute;
+  background-color: transparent;
   border: none;
+  min-height: 150px;
   outline: none;
   cursor: pointer;
-  color: orangered;
-  font-size: 18px;
+  font-size: 16px;
   text-align: justify;
   width: 100%;
-  min-height: 50px;
-  padding: 0px 10px;
   align-self: baseline;
 }
-
 .image-resolution-label {
   color: orangered;
   font-weight: bold;
@@ -100,7 +93,7 @@ body {
   font-size: 16px;
   display: flex;
   align-items: stretch;
-  justify-content: space-around;
+  justify-content: space-between;
   border-radius: 15px;
 }
 
@@ -124,14 +117,16 @@ body {
   font-weight: 600;
 }
 
-.prompt_gen_button {
-  color: grey;
-  padding: 15px;
-  border-radius: 15px;
+#prompt_gen_button {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  font-size: 16px;
+  background-color: rgb(255, 69, 0);
+  border: none;
+  outline: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 #generate-image {
@@ -140,30 +135,13 @@ body {
   outline: none;
   color: white;
   font-size: 16px;
-  padding: 15px 30px;
-  border-radius: 10px;
-  cursor: pointer;
 }
-
-#generate-image.clicked {
-  background-color: transparent;
-  border: 2px solid orangered;
-  color: orangered;
-}
-
 .important-buttons {
-  display: none;
-  flex-direction: column;
-  color: orangered;
-  background-color: white;
+  display: flex;
+  align-items: center;
   border-radius: 10px;
-}
-
-#sub, #submt {
-  padding: 8px 20px;
-  border: 1px solid orangered;
-  border-right-width: 2px;
-  border-left-width: 2px;
+  padding: 5px 20px;
+  background-color: rgb(128, 128, 128, 0.1);
 }
 
 .important-buttons a {
@@ -177,7 +155,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .heading-page {
@@ -196,11 +174,9 @@ body {
   display: flex;
   overflow-y: auto;
   flex-wrap: wrap;
-  gap: 10px;
-  width: 100%;
-  min-height: 70vh;
+  min-height: 75vh;
+  margin: 10px 0px 20px 0px;
   border-radius: 15px;
-  margin-top: 10px;
   background-color: white;
 }
 
@@ -217,4 +193,14 @@ body {
 
 .footer-text {
   color: grey;
+}
+::placeholder{
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
