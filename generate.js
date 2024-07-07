@@ -3,10 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get references to the input field, button, image container, and loading gif
   const genPromptInput = document.getElementById("search-term");
   const generateImageButton = document.getElementById("prompt_gen_button");
-  const imageContainer = document.getElementById("image-container");
+  const imageContainer = document.getElementById("images-container");
   const loadingGif = document.getElementById("loading");
+  const previousButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
   const imagesArray = [];
   let i = 0;
+  let a = 0;
 
   // Your Unsplash API key
   const apiKey = 'wafp7KFaS8fPuLnIhkaOp8dSBSYbgtZ302drCEEtth4'; 
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       // Show the loading gif
-      loadingGif.style.display = 'block';
+      loadingGif.style.display = 'flex';
 
       // Fetch data from the Unsplash API
       const response = await fetch(url, {
@@ -54,8 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = document.createElement('img');
         img.src = photo.urls.regular;
         img.alt = genPrompt;
+        img.className = "generatedImages";
+        imagesArray[i] = img;
+        i++;
 
-        imageContainer.appendChild(img);
         fetch('save_image.php', {
           method: 'POST',
           headers: {
@@ -74,7 +79,20 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error('Error:', error);
         });
       });
-            
+
+        // Creating Images carousel slider
+
+      imageContainer.appendChild(imagesArray[a]);
+      console.log(imagesArray);
+      previousButton.addEventListener('click', () => {
+          a--;
+          imageContainer.appendChild(imagesArray[a]);
+      });
+      nextButton.addEventListener('click', () => {
+          a++;
+          imageContainer.appendChild(imagesArray[a]);
+      });
+      
       // Display a message if no images were found
       if (data.results.length === 0) {
         imageContainer.innerHTML = `<p class="Not-found">No images found for "${genPrompt}".</p>`;

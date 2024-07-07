@@ -66,13 +66,15 @@
           </section>
         </section>
       </section>
-      <div id="image-container"></div>
-      <section class="save-or-not">
-        <form action='save_image.php' method='POST'>
+      <div id="image-container">
+        <button id="prev"><img src="icons/icons8-back-26.png" alt="Previous button"></button>
+        <div class="images-container"></div>
+        <button id="next"><img src="icons/icons8-forward-26.png" alt="Next button"></button>
+      </div>
+        <form action='save_image.php' method='POST' class="save-or-not">
           <button class="save" name='genimage'>Save All</button>
           <button class="continue">Continue</button>
         </form>
-      </section>
       
       <p class="footer-text">© 2024 Copyrights MUTESA-WILLY All Rights Reserved.</p>
     </section>
