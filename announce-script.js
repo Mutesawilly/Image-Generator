@@ -45,8 +45,8 @@ submitBtn.addEventListener("click", function() {
                 <p class="authors-role">UI/UX Designer</p>
             </section>
         </section>
-        <a download="ImgStock Generated Images" href=${upload_image}><button
-                class="read-more">Download</button></a>
+        <a download="ImgStock Generated Images" href=${upload_image}>
+            <img src="icons/icons8-downloading-updates-48.png" alt="Download" width="35"></a>
     </section>
     <img src=${upload_image} alt="ImgStock Generated Images" class="Image-Uploaded">    
 </section>`;

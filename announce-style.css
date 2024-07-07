@@ -73,6 +73,7 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: stretch;
   align-items: center;
   border-radius: 25px;
   min-height: 300px;
@@ -132,15 +133,12 @@ span {
   align-items: center;
 }
 
-#bio-author {
-  background-color: rgba(0, 0, 0, 0.3);
-  display: none;
+.bio-author {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
-  padding: 10px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  padding: 20px 0px;
 }
 
 .authors-name {

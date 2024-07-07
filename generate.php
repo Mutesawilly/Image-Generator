@@ -45,7 +45,7 @@
       </section>    
       <section class="btns">      
         <section id="prompt_gen_button">
-          <button id="generate-image">Generate</button>
+          <button id="generate-image" onclick="fetchAndDisplayImages()">Generate</button>
         </section>
             <a class="important-buttons" href="logout.php">
               <img src="icons/icons8-logout-64.png" width="35" alt="">

@@ -42,7 +42,6 @@ if(!$_SESSION['id']){
                 </label>
                 <input type="file" accept="image/*" id="img-container">
             </section>
-            
             <section class="announces">
                 <p class="announce-qoute">Upload Your Image With Only One Click</p>
                 <button id="announce-btn" type="file">Announce</button>
