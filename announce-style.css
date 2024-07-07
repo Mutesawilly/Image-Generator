@@ -82,6 +82,7 @@ input[type="file"] {
   background-size: cover;
 }
 .Image-Uploaded{
+  position: relative;
   max-width: 300px;
   min-height: 150px;
   border-radius: 15px;
@@ -123,14 +124,11 @@ span {
   font-size: 16px;
 }
 
-#first_reading_n {
-  min-height: 300px;
-  max-width: 350px;
-  border-radius: 25px;
+.first-reading-n {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 .bio-author {
