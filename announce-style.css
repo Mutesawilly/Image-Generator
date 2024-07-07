@@ -20,7 +20,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 15px 50px;
   border-radius: 15px;
 }
 
@@ -50,9 +50,9 @@ nav {
 
 .all-together {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: stretch;
-  padding: 30px;
+  padding: 20px 100px;
 }
 
 .container {
@@ -73,18 +73,17 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
   align-items: center;
   border-radius: 25px;
-  min-height: 300px;
+  min-height: 370px;
   color: orangered;
   font-size: 16px;
   background-size: cover;
 }
 .Image-Uploaded{
   position: relative;
-  max-width: 300px;
-  min-height: 150px;
+  width: 300px;
+  height: 150px;
   border-radius: 15px;
 }
 
@@ -136,7 +135,7 @@ span {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 
 .authors-name {
@@ -178,15 +177,30 @@ span {
   background-color: darkred;
 }
 
-#side-uploads {
+.images-cont-container{  
+  display: flex;
+  flex-direction: column;
   background-color: white;
   color: orangered;
-  padding: 30px;
+  height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
   border-radius: 25px;
+  overflow-y: scroll;
+  flex-wrap: wrap-reverse;
+}
+
+#side-uploads {
+  background-color: white;
+  color: orangered;
+  height: 480px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
   gap: 20px;
 }
 
@@ -218,4 +232,9 @@ span {
   border-radius: 25px;
   cursor: pointer;
   position: relative;
+}
+.upload-date{
+  color: grey;
+  font-size: 14px;
+  padding-top: 5px;
 }

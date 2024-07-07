@@ -28,6 +28,8 @@ let first_reading_n = document.getElementById("first_reading_n");
 let bio_author = document.getElementById("bio-author");
 let announce_btn_a = document.getElementById("announce-btn-second");
 let downloadable_images_container = document.getElementById("downloadable-images-container");
+let dates = new Date();
+let date = dates.toUTCString();
 
 
 
@@ -37,18 +39,8 @@ submitBtn.addEventListener("click", function() {
   }
   else {
     let html_input = `<section class="first-reading-n">
-    <section class="bio-author">
-        <section class="pic_authors_name">
-            <img src="Images/testm_1.webp" alt="" class="bio-img">
-            <section class="names-role">
-                <h1 class="authors-name">Beth Anderson</h1>
-                <p class="authors-role">UI/UX Designer</p>
-            </section>
-        </section>
-        <a download="ImgStock Generated Images" href=${upload_image}>
-            <img src="icons/icons8-downloading-updates-48.png" alt="Download" width="35"></a>
-    </section>
     <img src=${upload_image} alt="ImgStock Generated Images" class="Image-Uploaded">    
+    <p class="upload-date">Uploaded on ${date}</p>   
 </section>`;
 document.addEventListener('DOMContentLoaded', (upload_image) => {              
 first_reading_n.style.backgroundImage = `${upload_image}`;

@@ -38,16 +38,15 @@ body {
 .choice {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   color: orangered;
   font-weight: 400;
-  padding: 10px 0px;
+  padding: 10px 0px 10px 10px;
   border-left: 4px solid orangered;
-  padding-left: 10px;
 }
 
 .quote-to-capture {
   color: gray;
-  margin-right: 10px;
 }
 
 #prompt-choice {
@@ -183,9 +182,13 @@ body {
 #image-container {
   display: flex;
   overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  min-height: max-content;
   flex-wrap: wrap;
-  min-height: 75vh;
-  margin: 10px 0px 20px 0px;
+  min-height: 70vh;    
+  max-width: 980px;
+  margin: 10px 0px 0px 0px;
   border-radius: 15px;
   background-color: white;
 }
@@ -200,9 +203,14 @@ body {
   cursor: pointer;
   position: relative;
 }
-
+.Not-found{
+  color: orangered;
+  font-size: 24px;
+  font-weight: bold;
+}
 .footer-text {
   color: grey;
+  text-align: center;
 }
 ::placeholder{
   display: flex;
@@ -213,4 +221,26 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.save{
+  border: 2px solid orangered;
+  color: white;
+  background-color: orangered;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.continue{
+  outline: none;
+  color: orangered;
+  font-size: 16px;
+  border: 2px solid orangered;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.save-or-not{
+  margin-bottom: 10px;
 }

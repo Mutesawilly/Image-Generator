@@ -19,7 +19,7 @@
       
         <section class="choice">
           <p class="quote-to-capture">Generate unique and stunning</p>
-          <p id="prompt-choice">Images!</p>
+          <span id="prompt-choice">Images!</span>
         </section>
         
       <section id="prompt-input-container">
@@ -45,7 +45,7 @@
       </section>    
       <section class="btns">      
         <section id="prompt_gen_button">
-          <button id="generate-image"><img id="loading" src="icons/Hourglass.gif" alt="Loading...">Generate</button>
+          <button id="generate-image" ><img id="loading" src="icons/Hourglass.gif" alt="Loading...">Generate</button>
         </section>
             <a class="important-buttons" href="logout.php">
               <img src="icons/icons8-logout-64.png" width="35" alt="">
@@ -67,6 +67,13 @@
         </section>
       </section>
       <div id="image-container"></div>
+      <section class="save-or-not">
+        <form action='save_image.php' method='POST'>
+          <button class="save" name='genimage'>Save All</button>
+          <button class="continue">Continue</button>
+        </form>
+      </section>
+      
       <p class="footer-text">© 2024 Copyrights MUTESA-WILLY All Rights Reserved.</p>
     </section>
   </div>

@@ -22,7 +22,7 @@ if(!$_SESSION['id']){
         <section class="reading-packages-redirecting-links">
             <ul class="to-pages-links">
                 <li class='redirecting-to-pages-link'><a class='redirecting-to-pages-links' href="generate.php">Generate</a></li>
-                <li class='redirecting-to-pages-link'><a class='redirecting-to-pages-links'>Gallery</a></li>
+                <li class='redirecting-to-pages-link'><a class='redirecting-to-pages-links' href="galleryApp.php">Gallery</a></li>
                 <li class='redirecting-to-pages-link'><a class='redirecting-to-pages-links'>Donate</a></li>
             </ul>
         </section>
@@ -47,10 +47,13 @@ if(!$_SESSION['id']){
                 <button id="announce-btn" type="file">Announce</button>
             </section>
         </section>
-        <div id="side-uploads">
-      <h2>Upload History</h2>
-      <div id="downloadable-images-container"></div>
-    </div>
+        <section class="images-cont-container">
+            <div id="side-uploads">
+                <h2>Upload History</h2>
+                <div id="downloadable-images-container"></div>
+            </div>
+        </section>
+        
     </section>
     <script src="announce-script.js"></script>
     <script src="script.js"></script>

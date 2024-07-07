@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const generateImageButton = document.getElementById("prompt_gen_button");
   const imageContainer = document.getElementById("image-container");
   const loadingGif = document.getElementById("loading");
+  const imagesArray = [];
+  let i = 0;
 
   // Your Unsplash API key
   const apiKey = 'wafp7KFaS8fPuLnIhkaOp8dSBSYbgtZ302drCEEtth4'; 
@@ -52,12 +54,30 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = document.createElement('img');
         img.src = photo.urls.regular;
         img.alt = genPrompt;
-        imageContainer.appendChild(img);
-      });
 
+        imageContainer.appendChild(img);
+        fetch('save_image.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            imageUrl: photo.urls.regular,
+            altText: genPrompt
+          }),
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data.message);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+      });
+            
       // Display a message if no images were found
       if (data.results.length === 0) {
-        imageContainer.innerHTML = `<p>No images found for "${genPrompt}".</p>`;
+        imageContainer.innerHTML = `<p class="Not-found">No images found for "${genPrompt}".</p>`;
       }
     } catch (error) {
       // Log and alert in case of an error

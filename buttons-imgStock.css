@@ -67,7 +67,8 @@
 .read-more {
   background-color: orangered;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
+  font-weight: bold;
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
