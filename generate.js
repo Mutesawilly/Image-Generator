@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let a = 0;
 
   // Your Unsplash API key
-  const apiKey = 'wafp7KFaS8fPuLnIhkaOp8dSBSYbgtZ302drCEEtth4'; 
+  const apiKey = 'wafp7KFaS8fPuLnIhkaOp8dSBSYbgtZ302drCEEtth4';
 
   // Function to fetch and display images
   async function fetchAndDisplayImages() {
@@ -58,9 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
         img.src = photo.urls.regular;
         img.alt = genPrompt;
         img.className = "generatedImages";
-        imagesArray[i] = img;
-        i++;
+        imagesArray.push(img);
 
+        // Save the image URL to the server
         fetch('save_image.php', {
           method: 'POST',
           headers: {
@@ -80,19 +80,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
-        // Creating Images carousel slider
+      // Creating Images carousel slider
+      if (imagesArray.length > 0) {
+        imageContainer.appendChild(imagesArray[a]);
 
-      imageContainer.appendChild(imagesArray[a]);
-      console.log(imagesArray);
-      previousButton.addEventListener('click', () => {
-          a--;
-          imageContainer.appendChild(imagesArray[a]);
-      });
-      nextButton.addEventListener('click', () => {
-          a++;
-          imageContainer.appendChild(imagesArray[a]);
-      });
-      
+        previousButton.addEventListener('click', () => {
+          if (a > 0) {
+            a--;
+            imageContainer.innerHTML = '';
+            imageContainer.appendChild(imagesArray[a]);
+          }
+        });
+
+        nextButton.addEventListener('click', () => {
+          if (a < imagesArray.length - 1) {
+            a++;
+            imageContainer.innerHTML = '';
+            imageContainer.appendChild(imagesArray[a]);
+          }
+        });
+      }
+
       // Display a message if no images were found
       if (data.results.length === 0) {
         imageContainer.innerHTML = `<p class="Not-found">No images found for "${genPrompt}".</p>`;
