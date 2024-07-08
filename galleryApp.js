@@ -22,7 +22,14 @@ images.forEach((image, index) => {
 });
 
 // Toggling the search bar function
-function search() {
-    if(searchBar)
-    searchBar.style.display = "flex";
-}
+function toggleSearch() {
+    const searchBar = document.getElementById('search');
+    if (searchBar) {
+      if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+        searchBar.style.display = 'flex';
+      } else {
+        searchBar.style.display = 'none';
+      }
+    }
+  }
+  

@@ -24,7 +24,7 @@
             <input type="text" id="search" placeholder="Search all types of images in PNG, JPG, JPEG and SVG"
                 class="search-bar"></input>
         </section>
-        <img src="Icons/icons8-search-64 (1).png" alt="Search" id="essential-icons" onclick="search()">
+        <img src="Icons/icons8-search-64 (1).png" alt="Search" id="essential-icons" onclick="toggleSearch()">
         <section class="dropdown-menu">
         <img src="Icons/icons8-user-50.png" alt="Profile Picture" id="essential-icons_1">
         </section>

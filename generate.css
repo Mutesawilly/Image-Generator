@@ -131,6 +131,9 @@ body {
 #generate-image {
   background-color: rgb(255, 69, 0);
   border: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   outline: none;
   color: white;
   font-size: 16px;
@@ -239,6 +242,7 @@ body {
 }
 .save-or-not{
   margin-bottom: 10px;
+  text-align: right;
 }
 /* All images that are generated are designed from this place...*/
 .generatedImages{
