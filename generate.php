@@ -70,8 +70,8 @@ if (!isset($_SESSION['id'])) {
         <div class="images-container" id="images-container"></div>
         <button id="next"><img src="icons/icons8-forward-26.png" alt="Next button"></button>
       </div>
-      <form action='save_image.php' method='POST' class="save-or-not">
-        <button class="save" name='genimage'>Save All</button>
+      <form class="save-or-not">
+        <button class="save" id="save" onclick="sendingImages()" name='genimage'>Save All</button>
         <button class="continue">Continue</button>
       </form>
       <p class="footer-text">© 2024 Copyrights MUTESA-WILLY All Rights Reserved.</p>

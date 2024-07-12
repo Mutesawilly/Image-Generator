@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 * {
   margin: 0;
@@ -14,78 +14,96 @@ body {
 }
 
 /* Card of posts designed here! */
-  .authors-name {
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .authors-role {
-    font-size: 14px;
-    font-weight: normal;
-    color: white;
-  }
-  
-  .bio-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 25px;
-  }
-  
-  .bio-author {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(0, 0, 0, 0.3);
-    padding: 15px;
-  }
+.first-reading-n {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
 
-  #downloadable-images-container {
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-  }
-  
-  .image-stocks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 10px;
-    padding: 20px;
-  }
-  .side-tools{
-    padding: 20px;
-    background-color: rgb(255, 69, 0, 0.9);
-    min-height: 100vh;
-  }
-  .captive-heading{
-    padding: 5px 5px 5px 10px;
-    border-left: 4px solid gray;
-    color: gray;
-  }
-  .web-logo-name{
-    color: orangered;
-    font-weight: 700;
-  }
-  #essential-icons, #essential-icons_1 {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 25px;
-    cursor: pointer;
-    position: relative;
-  }
-  
+.bio-author {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  display: none; /* Initially hidden */
+}
+
+.authors-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.authors-role {
+  font-size: 14px;
+  font-weight: normal;
+  color: white;
+}
+
+.bio-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+}
+
+#downloadable-images-container {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.image-stocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+  padding: 20px;
+}
+
+.side-tools {
+  padding: 20px;
+  background-color: rgba(255, 69, 0, 0.9);
+  min-height: 100vh;
+}
+
+.captive-heading {
+  padding: 5px 5px 5px 10px;
+  border-left: 4px solid gray;
+  color: gray;
+}
+
+.web-logo-name {
+  color: orangered;
+  font-weight: 700;
+}
+
+#essential-icons, #essential-icons_1 {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+}
+
 .heading-page {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: rgb(128, 128, 128, 0.1);
+  background-color: rgba(128, 128, 128, 0.1);
 }
 
 .ess-buttons {
@@ -93,6 +111,7 @@ body {
   align-items: stretch;
   gap: 20px;
 }
+
 .logo-name {
   display: flex;
   align-items: stretch;
@@ -103,28 +122,31 @@ body {
   text-decoration: none;
   gap: 20px;
 }
-.genre{
+
+.genre {
   display: flex;
   align-items: center;
 }
-.posted-image{
+
+.posted-image {
   max-width: 300px;
 }
 
 /* Our searching Bar designed from here! */
 .search-bar {
-  display: none;
   font-family: "Poppins", sans-serif;
   outline: none;
   appearance: none;
   border: none;
-  width: 100%;
   background-color: orangered;
   color: white;
   font-size: 16px;
+  width: 50%;
   padding: 10px 30px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
-::placeholder{
-  color: white;
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+  width: 100%;
 }

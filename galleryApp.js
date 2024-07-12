@@ -1,35 +1,43 @@
 const authorsBios = document.querySelectorAll(".bio-author");
-const images = document.querySelectorAll(".first-reading-n");
-const searchBar = document.querySelector(".search-bar");
-const searchIcon = document.getElementById("essential-icons");
+const images = document.querySelectorAll(".posted-image");
+
+let bioVisibleIndex = -1; // To track which bio-author section is currently visible
 
 // Initialize: Hide all bios initially
 authorsBios.forEach(author => {
     author.style.display = "none";
 });
 
-// Add click event listener to each image
+// Add mouseover, mouseout, and click event listeners to each image
 images.forEach((image, index) => {
-    image.addEventListener('click', () => {
-        // Hide all bios
-        authorsBios.forEach(author => {
-            author.style.display = "none";
-        });
+    image.addEventListener('mouseover', () => {
+        if (bioVisibleIndex !== index) {
+            authorsBios[index].style.display = "flex";
+        }
+    });
 
-        // Show the clicked image's bio
+    image.addEventListener('mouseout', () => {
+        if (bioVisibleIndex !== index) {
+            authorsBios[index].style.display = "none";
+        }
+    });
+
+    image.addEventListener('click', () => {
+        if (bioVisibleIndex !== -1) {
+            authorsBios[bioVisibleIndex].style.display = "none";
+        }
+        bioVisibleIndex = index;
         authorsBios[index].style.display = "flex";
     });
 });
 
-// Toggling the search bar function
-function toggleSearch() {
-    const searchBar = document.getElementById('search');
-    if (searchBar) {
-      if (searchBar.style.display === 'none' || searchBar.style.display === '') {
-        searchBar.style.display = 'flex';
-      } else {
-        searchBar.style.display = 'none';
-      }
+document.body.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('posted-image')) {
+        if (bioVisibleIndex !== -1) {
+            authorsBios[bioVisibleIndex].style.display = "none";
+            bioVisibleIndex = -1;
+        }
     }
-  }
-  
+});
+
+// Adding the image as the background of the first-reading-n section

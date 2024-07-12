@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = document.createElement('img');
         img.src = photo.urls.regular;
         img.alt = genPrompt;
-        img.className = "generatedImages";
+        img.id = "generatedImages";
         imagesArray.push(img);
 
         // Save the image URL to the server

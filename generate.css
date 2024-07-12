@@ -245,8 +245,8 @@ body {
   text-align: right;
 }
 /* All images that are generated are designed from this place...*/
-.generatedImages{
-  max-width: 80%;
+#generatedImages{
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
