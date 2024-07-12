@@ -78,5 +78,6 @@ if (!isset($_SESSION['id'])) {
     </section>
   </div>
   <script async src="generate.js"></script>
+  <script async src="upload.js"></script>
 </body>
 </html>

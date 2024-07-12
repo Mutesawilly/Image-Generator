@@ -68,5 +68,6 @@
 </section>
 
 <script src="galleryApp.js"></script>
+<script async src="upload.js"></script>
 </body>
 </html>
