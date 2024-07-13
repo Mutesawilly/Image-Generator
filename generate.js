@@ -1,120 +1,112 @@
-// Wait for the DOM to load before running the script
 document.addEventListener("DOMContentLoaded", () => {
-  // Get references to the input field, button, image container, and loading gif
   const genPromptInput = document.getElementById("search-term");
-  const generateImageButton = document.getElementById("prompt_gen_button");
+  const generateImageButton = document.getElementById("generate-image");
   const imageContainer = document.getElementById("images-container");
   const loadingGif = document.getElementById("loading");
   const previousButton = document.getElementById("prev");
   const nextButton = document.getElementById("next");
+  const saveButton = document.getElementById("save");
   const imagesArray = [];
-  let i = 0;
-  let a = 0;
+  let currentIndex = 0;
 
-  // Your Unsplash API key
   const apiKey = 'wafp7KFaS8fPuLnIhkaOp8dSBSYbgtZ302drCEEtth4';
 
-  // Function to fetch and display images
   async function fetchAndDisplayImages() {
     const genPrompt = genPromptInput.value;
 
-    // Check if the search term is empty
     if (!genPrompt) {
       alert("Please enter the image description.");
       return;
     }
 
-    // Number of images to fetch
     const numImages = 6;
-
-    // Construct the API URL
     const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(genPrompt)}&per_page=${numImages}`;
 
     try {
-      // Show the loading gif
       loadingGif.style.display = 'flex';
 
-      // Fetch data from the Unsplash API
       const response = await fetch(url, {
         headers: {
           Authorization: `Client-ID ${apiKey}`
         }
       });
 
-      // Check if the response is not OK
       if (!response.ok) {
         throw new Error(`Error: ${response.status}`);
       }
 
-      // Parse the JSON response
       const data = await response.json();
-
-      // Clear the image container
       imageContainer.innerHTML = '';
+      imagesArray.length = 0;
 
-      // Loop through the photos and display each image
       data.results.forEach(photo => {
         const img = document.createElement('img');
         img.src = photo.urls.regular;
         img.alt = genPrompt;
         img.id = "generatedImages";
         imagesArray.push(img);
-
-        // Save the image URL to the server
-        fetch('save_image.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            imageUrl: photo.urls.regular,
-            altText: genPrompt
-          }),
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data.message);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
       });
 
-      // Creating Images carousel slider
       if (imagesArray.length > 0) {
-        imageContainer.appendChild(imagesArray[a]);
+        imageContainer.appendChild(imagesArray[currentIndex]);
 
         previousButton.addEventListener('click', () => {
-          if (a > 0) {
-            a--;
+          if (currentIndex > 0) {
+            currentIndex--;
             imageContainer.innerHTML = '';
-            imageContainer.appendChild(imagesArray[a]);
+            imageContainer.appendChild(imagesArray[currentIndex]);
           }
         });
 
         nextButton.addEventListener('click', () => {
-          if (a < imagesArray.length - 1) {
-            a++;
+          if (currentIndex < imagesArray.length - 1) {
+            currentIndex++;
             imageContainer.innerHTML = '';
-            imageContainer.appendChild(imagesArray[a]);
+            imageContainer.appendChild(imagesArray[currentIndex]);
           }
         });
-      }
-
-      // Display a message if no images were found
-      if (data.results.length === 0) {
+      } else {
         imageContainer.innerHTML = `<p class="Not-found">No images found for "${genPrompt}".</p>`;
       }
     } catch (error) {
-      // Log and alert in case of an error
       console.error('Error fetching images:', error);
       alert('Error fetching images. Please try again later.');
     } finally {
-      // Hide the loading gif
       loadingGif.style.display = 'none';
     }
   }
 
-  // Add a click event listener to the button
+  
+  // Inside fetchAndDisplayImages function after imagesArray is populated
+saveButton.addEventListener("click", () => {
+  const imagesToSave = imagesArray.map(img => img.src);
+  const formData = new FormData();
+  formData.append('genimage', 'true');
+  formData.append('images', JSON.stringify(imagesToSave));
+
+  fetch('save_image.php', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error('Error saving images.');
+      }
+      alert('All images have been saved to the database.');
+  })
+  .catch(error => {
+      console.error('Error saving images:', error);
+      alert('Error saving images. Please try again later.');
+  });
+});
+
+
+  // function saveAllImages() {
+  //   const savedImages = imagesArray.map(img => img.src);
+  //   localStorage.setItem('savedImages', JSON.stringify(savedImages));
+  //   alert('All images have been saved to local storage.');
+  // }
+
   generateImageButton.addEventListener("click", fetchAndDisplayImages);
+  // saveButton.addEventListener("click", saveAllImages);
 });

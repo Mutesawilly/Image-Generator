@@ -5,7 +5,6 @@ if (!isset($_SESSION['id'])) {
     exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,14 +69,13 @@ if (!isset($_SESSION['id'])) {
         <div class="images-container" id="images-container"></div>
         <button id="next"><img src="icons/icons8-forward-26.png" alt="Next button"></button>
       </div>
-      <form class="save-or-not">
-        <button class="save" id="save" onclick="sendingImages()" name='genimage'>Save All</button>
-        <button class="continue">Continue</button>
+      <form class="save-or-not" action="save_image.php" method="POST">
+        <button class="save" id="save" type="button" name="genimage">Save All</button>
+        <button class="continue" type="button">Continue</button>
       </form>
       <p class="footer-text">© 2024 Copyrights MUTESA-WILLY All Rights Reserved.</p>
     </section>
   </div>
-  <script async src="generate.js"></script>
-  <script async src="upload.js"></script>
+  <script src="generate.js"></script>
 </body>
 </html>
