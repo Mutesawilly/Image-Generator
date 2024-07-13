@@ -7,7 +7,7 @@ if(isset($_POST["submit-signup"])){
     $PASSWORD = $_POST["password"];
 
 
-$submitting = "INSERT INTO `login_signup_form` (userName, emailAddress, usersRole, PASSWORD) VALUES ( '$userName', '$emailAdderss', '$usersRole', '$PASSWORD')";
+$submitting = "INSERT INTO `login_signup_form` (`userName`, `emailAddress`, `usersRole`, `PASSWORD`) VALUES ( '$userName', '$emailAdderss', '$usersRole', '$PASSWORD')";
 
 if(mysqli_query($connections, $submitting)){
     header("location:index.html");
@@ -20,7 +20,7 @@ if(isset($_POST["submit-login"])){
     $PASSWORD = $_POST["login-password"];
     
 
-    $selecting = "SELECT *FROM login_signup_form WHERE emailAddress = '$emailAdderss' AND PASSWORD = '$PASSWORD'";
+    $selecting = "SELECT *FROM `login_signup_form` WHERE `emailAddress` = '$emailAdderss' AND `PASSWORD` = '$PASSWORD'";
     $result=mysqli_query($connections, $selecting);
     $record=mysqli_fetch_assoc($result);
     if($record){

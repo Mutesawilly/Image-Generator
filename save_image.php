@@ -6,14 +6,8 @@ if (!isset($_SESSION['id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['genimage'])) {
-    // Assuming you have a database connection established
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "istock-users-credentials";
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    include("All_In_One.php");
 
     // Check connection
     if ($conn->connect_error) {
@@ -24,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['genimage'])) {
     if (isset($_POST['images'])) {
         foreach ($_POST['images'] as $image_url) {
             $image_url = $conn->real_escape_string($image_url); // Escape any special characters
-            $sql = "INSERT INTO uploadedimages (`imageId`, `Image`) VALUES ('{$_SESSION['id']}', '$image_url')";
+            $sql = "INSERT INTO `uploadedimages` (`imageId`, `Image`) VALUES ('{$_SESSION['id']}', '$image_url')";
 
             if ($conn->query($sql) !== TRUE) {
                 echo "Error: " . $sql . "<br>" . $conn->error;
