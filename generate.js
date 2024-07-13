@@ -76,29 +76,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  
-  // Inside fetchAndDisplayImages function after imagesArray is populated
-saveButton.addEventListener("click", () => {
-  const imagesToSave = imagesArray.map(img => img.src);
-  const formData = new FormData();
-  formData.append('genimage', 'true');
-  formData.append('images', JSON.stringify(imagesToSave));
+  saveButton.addEventListener("click", () => {
+    const formData = new FormData();
+    formData.append('genimage', 'true');
+    imagesArray.forEach(img => formData.append('images[]', img.src));
 
-  fetch('save_image.php', {
-      method: 'POST',
-      body: formData
-  })
-  .then(response => {
-      if (!response.ok) {
-          throw new Error('Error saving images.');
-      }
-      alert('All images have been saved to the database.');
-  })
-  .catch(error => {
-      console.error('Error saving images:', error);
-      alert('Error saving images. Please try again later.');
-  });
+    fetch('save_image.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error saving images.');
+        }
+        alert('All images have been saved to the database.');
+    })
+    .catch(error => {
+        console.error('Error saving images:', error);
+        alert('Error saving images. Please try again later.');
+    });
 });
+
 
 
   // function saveAllImages() {
