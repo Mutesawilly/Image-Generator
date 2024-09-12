@@ -8,7 +8,7 @@ if (!isset($_SESSION['id'])) {
 include("All_In_One.php");
 
 $userId = $_SESSION['id'];
-$query = "SELECT Image FROM uploadedimages WHERE userId = '$userId' AND IsGenerated = 1";
+$query = "SELECT `Image` FROM uploadedimages WHERE userId = '$userId'";
 $result = mysqli_query($connections, $query);
 
 if (!$result) {

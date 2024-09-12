@@ -6,14 +6,8 @@ if (!isset($_SESSION['id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['genimage'])) {
-    // Assuming you have a database connection established
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "istock-users-credentials";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    include("All_In_One.php");
 
     // Check connection
     if ($conn->connect_error) {
